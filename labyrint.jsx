@@ -68,6 +68,26 @@ const LabyrintApp = () => {
             </p>
           )}
 
+          {filters.length > 0 && (
+            <p>
+              Zatím jste vybrali:{" "}
+              {filters
+                .map(
+                  (filter) =>
+                    ({
+                      goals: "cíl",
+                      actors: "aktéra",
+                      targets: "cílovou skupinu",
+                      consequences: "následky",
+                      actions: "akce",
+                    }[filter.key] +
+                    " " +
+                    filter.value)
+                )
+                .join(", ")}
+            </p>
+          )}
+
           {step === "goals" && (
             <p>Jaký cíl byste si přáli, aby konspirace měla?</p>
           )}
@@ -100,6 +120,26 @@ const LabyrintApp = () => {
 
       {showResults && (
         <>
+          {filters.length > 0 && (
+            <p>
+              Vybrali jste:{" "}
+              {filters
+                .map(
+                  (filter) =>
+                    ({
+                      goals: "cíl",
+                      actors: "aktéra",
+                      targets: "cílovou skupinu",
+                      consequences: "následky",
+                      actions: "akce",
+                    }[filter.key] +
+                    " " +
+                    filter.value)
+                )
+                .join(", ")}
+            </p>
+          )}
+
           <p>
             Tak to by Vás mohly zajímat konspirace z{" "}
             {conspiracies.length > 1
