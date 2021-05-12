@@ -5,7 +5,7 @@ module.exports = {
     labyrint: "./labyrint.jsx",
   },
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "public", "build"),
     filename: "[name].js",
   },
   module: {
@@ -23,6 +23,6 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: "./build",
+    contentBase: "./public",
   },
 };
