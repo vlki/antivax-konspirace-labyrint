@@ -17,4 +17,4 @@ var initLabyrint = function () {
   }
 };
 
-document.addEventListener("DOMContentLoaded", initLabyrint);
+initLabyrint();
