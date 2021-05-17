@@ -139,7 +139,7 @@ const LabyrintApp = () => {
               href="https://thenounproject.com/term/maze/2871969"
               target="_blank"
             >
-              Alexander Skowalsky
+              Alexander&nbsp;Skowalsky
             </a>
           </div>
         </div>
@@ -283,7 +283,19 @@ const applyFilters = (conspiracies, filters) => {
   return orderBy(filtered, ["title", "server"], ["asc", "asc"]);
 };
 
-const availableArticleIllustrations = [3, 21];
+const availableArticleIllustrations = [
+  2, 3, 7, 8, 9,
+
+  11, 12, 13, 14, 15, 16, 17, 18, 19,
+
+  20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+
+  30, 31, 32, 33, 34, 35, 36, 37,
+
+  40, 41, 43, 44, 45, 46, 48, 49,
+
+  50, 51,
+];
 
 const getArticleIllustrationUrl = (conspiracy) => {
   console.log("-----------", { conspiracy });
