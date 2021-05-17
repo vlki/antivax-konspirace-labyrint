@@ -15,7 +15,7 @@
             "Zisk"
         ],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde jen o ch\u0159ipku"
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)"
         ],
         "consequences": [
             "Zadlu\u017een\u00ed st\u00e1t\u016f"
@@ -34,7 +34,7 @@
         ],
         "actors": [
             "Bill Gates",
-            "Big Pharma"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)"
         ],
         "goals": [
             "Depopulace"
@@ -59,7 +59,7 @@
         ],
         "actors": [
             "Bill Gates",
-            "Big Pharma"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)"
         ],
         "goals": [
             "Depopulace"
@@ -90,8 +90,8 @@
             "Depopulace"
         ],
         "actions": [
-            "Vakcinace neozkou\u0161en\u00fdmi vakc\u00ednami",
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee vakc\u00edny vedou k \u0161\u00ed\u0159en\u00ed covidu",
+            "O\u010dkov\u00e1n\u00ed potenci\u00e1ln\u011b nebezpe\u010dnou vakc\u00ednou",
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)",
             "Zaveden\u00ed o\u010dkovac\u00edch pas\u016f"
         ],
         "consequences": [
@@ -112,7 +112,7 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Vl\u00e1dy st\u00e1t\u016f",
             "Globalist\u00e9"
         ],
@@ -120,7 +120,7 @@
             "Kontrola populace"
         ],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde o klinick\u00e9 testy",
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)",
             "O\u010dkov\u00e1n\u00ed potenci\u00e1ln\u011b nebezpe\u010dnou vakc\u00ednou"
         ],
         "consequences": [
@@ -141,12 +141,12 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "EU"
         ],
         "goals": [],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde o klinick\u00e9 testy",
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)",
             "O\u010dkov\u00e1n\u00ed potenci\u00e1ln\u011b nebezpe\u010dnou vakc\u00ednou"
         ],
         "consequences": [
@@ -217,8 +217,8 @@
         ],
         "actors": [
             "Bill Gates",
-            "Big Pharma",
-            "Rothschildi"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity"
         ],
         "goals": [
             "Kontrola populace"
@@ -270,8 +270,8 @@
         ],
         "actors": [
             "Bill Gates",
-            "Princ Charles",
-            "Klaus Schwab"
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
             "Experiment na populaci"
@@ -297,14 +297,14 @@
         ],
         "actors": [
             "Technologick\u00e9 elity",
-            "Rockefellerov\u00e9",
-            "Klaus Schwab"
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
             "Kontrola populace"
         ],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde o experiment",
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)",
             "O\u010dkov\u00e1n\u00ed potenci\u00e1ln\u011b nebezpe\u010dnou vakc\u00ednou",
             "O\u010dkov\u00e1n\u00ed vakc\u00ednami, co obsahuj\u00ed \u010dip"
         ],
@@ -325,11 +325,11 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "L\u00e9ka\u0159i"
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [],
         "actions": [
-            "V\u00fdroba vakc\u00edn jako biologick\u00fdch zbran\u00ed"
+            "Zav\u00e1d\u011bn\u00ed vakc\u00edn jako biologick\u00fdch zbran\u00ed"
         ],
         "consequences": [
             "Smrt"
@@ -375,9 +375,9 @@
         ],
         "actors": [
             "Vl\u00e1dy st\u00e1t\u016f",
-            "Big Pharma",
-            "Zdravotnick\u00e9 organizace",
-            "M\u00e9dia",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
+            "M\u00e9dia a medi\u00e1ln\u00ed elity",
             "Bill Gates",
             "Anthony Fauci"
         ],
@@ -385,7 +385,7 @@
             "Kontrola populace"
         ],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde o experiment",
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)",
             "O\u010dkov\u00e1n\u00ed vakc\u00ednami, co obsahuj\u00ed \u010dip"
         ],
         "consequences": [
@@ -405,16 +405,16 @@
         ],
         "actors": [
             "Komunist\u00e9",
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
-            "OSN",
-            "WHO"
+            "Nadn\u00e1rodn\u00ed organizace",
+            "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
             "Glob\u00e1ln\u00ed komunismus"
         ],
         "actions": [
-            "V\u00fdroba vakc\u00edn jako biologick\u00fdch zbran\u00ed"
+            "Zav\u00e1d\u011bn\u00ed vakc\u00edn jako biologick\u00fdch zbran\u00ed"
         ],
         "consequences": [
             "Ztr\u00e1ta kontroly nad t\u011blem",
@@ -434,16 +434,16 @@
         ],
         "actors": [
             "Komunist\u00e9",
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
-            "OSN",
-            "WHO"
+            "Nadn\u00e1rodn\u00ed organizace",
+            "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
             "Glob\u00e1ln\u00ed komunismus"
         ],
         "actions": [
-            "V\u00fdroba vakc\u00edn jako biologick\u00fdch zbran\u00ed"
+            "Zav\u00e1d\u011bn\u00ed vakc\u00edn jako biologick\u00fdch zbran\u00ed"
         ],
         "consequences": [
             "Ztr\u00e1ta kontroly nad t\u011blem",
@@ -463,16 +463,16 @@
         ],
         "actors": [
             "Komunist\u00e9",
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
-            "OSN",
-            "WHO"
+            "Nadn\u00e1rodn\u00ed organizace",
+            "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
             "Glob\u00e1ln\u00ed komunismus"
         ],
         "actions": [
-            "V\u00fdroba vakc\u00edn jako biologick\u00fdch zbran\u00ed"
+            "Zav\u00e1d\u011bn\u00ed vakc\u00edn jako biologick\u00fdch zbran\u00ed"
         ],
         "consequences": [
             "Ztr\u00e1ta kontroly nad t\u011blem",
@@ -516,12 +516,12 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Moderna",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
             "Globalist\u00e9",
-            "Big Pharma",
-            "DARPA",
-            "Zdravotnick\u00e9 organizace"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
             "Kontrola populace"
@@ -548,12 +548,12 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Moderna",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
             "Globalist\u00e9",
-            "Big Pharma",
-            "DARPA",
-            "Zdravotnick\u00e9 organizace"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
             "Depopulace"
@@ -577,7 +577,7 @@
             "Pandemie"
         ],
         "actors": [
-            "Big Pharma"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)"
         ],
         "goals": [
             "Zisk"
@@ -604,10 +604,10 @@
         ],
         "actors": [
             "Bill Gates",
-            "George Soros",
-            "Warren Buffett",
-            "Michael Bloomberg",
-            "Ted Turner"
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "M\u00e9dia a medi\u00e1ln\u00ed elity",
+            "M\u00e9dia a medi\u00e1ln\u00ed elity"
         ],
         "goals": [
             "Depopulace",
@@ -684,14 +684,14 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Vl\u00e1dy st\u00e1t\u016f"
         ],
         "goals": [
             "Kontrola populace"
         ],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde o experiment",
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)",
             "Omezen\u00ed pr\u00e1v ob\u010dan\u016f"
         ],
         "consequences": [
@@ -711,8 +711,8 @@
         ],
         "actors": [
             "Bill Gates",
-            "DARPA",
-            "Moderna",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Vl\u00e1dy st\u00e1t\u016f",
             "Technologick\u00e9 elity"
         ],
@@ -722,7 +722,7 @@
         "actions": [
             "O\u010dkov\u00e1n\u00ed vakc\u00ednami zp\u016fsobuj\u00edc\u00edmi genetick\u00e9 modifikace",
             "O\u010dkov\u00e1n\u00ed vakc\u00ednami, co obsahuj\u00ed \u010dip",
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde o experiment"
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)"
         ],
         "consequences": [
             "Totalita",
@@ -742,7 +742,7 @@
         ],
         "actors": [
             "Bill Gates",
-            "DARPA"
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
             "Depopulace"
@@ -767,12 +767,12 @@
         ],
         "actors": [
             "Bill Gates",
-            "Rockefellerov\u00e9",
-            "Warren Buffett",
-            "Michael Bloomberg",
-            "Oprah Winfrey",
-            "George Soros",
-            "Ted Turner"
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "M\u00e9dia a medi\u00e1ln\u00ed elity",
+            "M\u00e9dia a medi\u00e1ln\u00ed elity",
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "M\u00e9dia a medi\u00e1ln\u00ed elity"
         ],
         "goals": [
             "Depopulace"
@@ -797,8 +797,8 @@
         ],
         "actors": [
             "Bill Gates",
-            "Rockefellerov\u00e9",
-            "Zdravotnick\u00e9 organizace",
+            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
             "Technologick\u00e9 elity"
         ],
         "goals": [
@@ -824,13 +824,13 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "WHO",
+            "Nadn\u00e1rodn\u00ed organizace",
             "Bill Gates",
             "Deep state",
             "Anthony Fauci",
             "Vl\u00e1dy st\u00e1t\u016f",
             "CDC",
-            "M\u00e9dia"
+            "M\u00e9dia a medi\u00e1ln\u00ed elity"
         ],
         "goals": [
             "Depopulace",
@@ -858,9 +858,9 @@
         ],
         "actors": [
             "Bill Gates",
-            "Moderna",
-            "DARPA",
-            "Big Pharma"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)"
         ],
         "goals": [
             "Kontrola populace"
@@ -886,9 +886,9 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "WHO",
-            "Moderna",
-            "Pfizer",
+            "Nadn\u00e1rodn\u00ed organizace",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
             "Vl\u00e1dy st\u00e1t\u016f"
         ],
@@ -897,7 +897,7 @@
             "Depopulace"
         ],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn"
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)"
         ],
         "consequences": [
             "Zm\u011bna sexu\u00e1ln\u00ed orientace",
@@ -942,7 +942,7 @@
         "actors": [
             "Bill Gates",
             "CDC",
-            "Moderna",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Anthony Fauci"
         ],
         "goals": [
@@ -989,7 +989,7 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "EU",
             "Vl\u00e1dy st\u00e1t\u016f"
         ],
@@ -997,7 +997,7 @@
             "Experiment na populaci"
         ],
         "actions": [
-            "Zatajov\u00e1n\u00ed informac\u00ed, \u017ee jde o klinick\u00e9 testy",
+            "Zatajov\u00e1n\u00ed informac\u00ed (o slo\u017een\u00ed a \u00fa\u010dinnosti vakc\u00edn nebo \u017ee jde o experiment p\u0159\u00edpadn\u011b klinick\u00e9 testy)",
             "O\u010dkov\u00e1n\u00ed potenci\u00e1ln\u011b nebezpe\u010dnou vakc\u00ednou"
         ],
         "consequences": [
@@ -1124,13 +1124,13 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Big Pharma"
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)"
         ],
         "goals": [
             "Zisk"
         ],
         "actions": [
-            "Zaveden\u00ed povinn\u00e9ho o\u010dkov\u00e1n\u00ed"
+            "Hromadn\u00e1 vakcinace obyvatelstva"
         ],
         "consequences": [
             "Totalita"
@@ -1150,7 +1150,7 @@
         "actors": [
             "Bill Gates",
             "Korporace",
-            "Mezivl\u00e1dn\u00ed organizace",
+            "Nadn\u00e1rodn\u00ed organizace",
             "Charitativn\u00ed nadace"
         ],
         "goals": [
@@ -1176,7 +1176,7 @@
         ],
         "actors": [
             "Bill Gates",
-            "Pirbright Institute"
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
             "Depopulace"
@@ -1224,7 +1224,7 @@
             "O\u010dkov\u00e1n\u00ed"
         ],
         "actors": [
-            "Big Pharma",
+            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Globalist\u00e9"
         ],
         "goals": [
@@ -1251,7 +1251,7 @@
         "actors": [],
         "goals": [],
         "actions": [
-            "O\u010dkov\u00e1n\u00ed nebezpe\u010dnou vakc\u00ednou"
+            "Zav\u00e1d\u011bn\u00ed vakc\u00edn jako biologick\u00fdch zbran\u00ed"
         ],
         "consequences": [
             "Zdravotn\u00ed komplikace"
@@ -1270,10 +1270,10 @@
         ],
         "actors": [
             "Bill Gates",
-            "WHO",
-            "Institut Roberta Kocha",
+            "Nadn\u00e1rodn\u00ed organizace",
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
             "Johns Hopkins University",
-            "Sv\u011btov\u00e9 ekonomick\u00e9 f\u00f3rum"
+            "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
             "Depopulace"
@@ -1335,7 +1335,7 @@
             "New World Order"
         ],
         "actions": [
-            "V\u00fdroba vakc\u00edn jako biologick\u00fdch zbran\u00ed"
+            "Zav\u00e1d\u011bn\u00ed vakc\u00edn jako biologick\u00fdch zbran\u00ed"
         ],
         "consequences": [
             "Smrt",
