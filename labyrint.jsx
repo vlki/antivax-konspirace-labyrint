@@ -240,8 +240,7 @@ const LabyrintApp = () => {
                   className="article-illustration"
                 >
                   <img
-                    // TODO:
-                    src="article-illustration-placeholder.svg"
+                    src={getArticleIllustrationUrl(conspiracy)}
                     alt={conspiracy.title + " (" + conspiracy.server + ")"}
                   />
                 </a>
@@ -282,6 +281,17 @@ const applyFilters = (conspiracies, filters) => {
   });
 
   return orderBy(filtered, ["title", "server"], ["asc", "asc"]);
+};
+
+const availableArticleIllustrations = [3, 21];
+
+const getArticleIllustrationUrl = (conspiracy) => {
+  console.log("-----------", { conspiracy });
+  if (availableArticleIllustrations.includes(conspiracy.sources_no)) {
+    return `article-illustrations/${conspiracy.sources_no}.jpg`;
+  }
+
+  return "article-illustration-placeholder.svg";
 };
 
 const container = document.getElementById("antivax-konspirace-labyrint");

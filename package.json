@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack --watch",
-    "serve-dev": "python -m http.server 3000"
+    "serve-dev": "cd public && python -m http.server 3000"
   },
   "keywords": [],
   "author": "",

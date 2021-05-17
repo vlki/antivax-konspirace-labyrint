@@ -125,6 +125,7 @@
   line-height: 1.5;
   font-weight: 700;
   margin-top: 40px;
+  text-align: center;
 }
 
 .screen-question .options {
@@ -202,6 +203,22 @@
 
 .screen-results .article .article-other .article-server {
   color: #6C6C6C;
+}
+
+@media screen and (max-width: 450px) {
+  .screen-results .article {
+    flex-direction: column;
+  }
+
+  .screen-results .article .article-illustration {
+    flex: 0 0 auto;
+    width: 170px;
+  }
+
+  .screen-results .article .article-other {
+    flex: 0 0 auto;
+    margin: 5px 0 0 0;
+  }
 }
 
 .screen-results .filler {
