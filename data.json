@@ -407,7 +407,6 @@
             "Komunist\u00e9",
             "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
-            "Nadn\u00e1rodn\u00ed organizace",
             "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
@@ -436,7 +435,6 @@
             "Komunist\u00e9",
             "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
-            "Nadn\u00e1rodn\u00ed organizace",
             "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
@@ -465,7 +463,6 @@
             "Komunist\u00e9",
             "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
-            "Nadn\u00e1rodn\u00ed organizace",
             "Nadn\u00e1rodn\u00ed organizace"
         ],
         "goals": [
@@ -519,8 +516,6 @@
             "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
             "Globalist\u00e9",
-            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
-            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
             "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
@@ -551,8 +546,6 @@
             "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
             "Globalist\u00e9",
-            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
-            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
             "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
@@ -605,8 +598,6 @@
         "actors": [
             "Bill Gates",
             "Finan\u010dn\u00ed a mocensk\u00e9 elity",
-            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
-            "M\u00e9dia a medi\u00e1ln\u00ed elity",
             "M\u00e9dia a medi\u00e1ln\u00ed elity"
         ],
         "goals": [
@@ -768,10 +759,6 @@
         "actors": [
             "Bill Gates",
             "Finan\u010dn\u00ed a mocensk\u00e9 elity",
-            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
-            "M\u00e9dia a medi\u00e1ln\u00ed elity",
-            "M\u00e9dia a medi\u00e1ln\u00ed elity",
-            "Finan\u010dn\u00ed a mocensk\u00e9 elity",
             "M\u00e9dia a medi\u00e1ln\u00ed elity"
         ],
         "goals": [
@@ -859,8 +846,7 @@
         "actors": [
             "Bill Gates",
             "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
-            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
-            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)"
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
             "Kontrola populace"
@@ -887,7 +873,6 @@
         ],
         "actors": [
             "Nadn\u00e1rodn\u00ed organizace",
-            "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Big Pharma (v\u010detn\u011b spole\u010dnost\u00ed Pfizer a Moderna)",
             "Bill Gates",
             "Vl\u00e1dy st\u00e1t\u016f"
@@ -1271,9 +1256,7 @@
         "actors": [
             "Bill Gates",
             "Nadn\u00e1rodn\u00ed organizace",
-            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce",
-            "Johns Hopkins University",
-            "Nadn\u00e1rodn\u00ed organizace"
+            "L\u00e9ka\u0159i, v\u00fdzkumn\u00e9 a zdravotnick\u00e9 instituce"
         ],
         "goals": [
             "Depopulace"

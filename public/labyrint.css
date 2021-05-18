@@ -1,11 +1,11 @@
 .antivax-konspirace-labyrint-app {
   box-sizing: border-box;
-  max-width: 550px;
-  min-height: 700px;
+  max-width: 450px;
+  min-height: 625px;
   font-family: 'Merriweather', serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 
@@ -15,9 +15,9 @@
 
 .primary-link {
   font-family: 'Merriweather', serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
-  color: #CB691B;
+  color: #c75d07;
   text-decoration: none;
   border: 0;
   margin: 0;
@@ -35,7 +35,7 @@
 
 .secondary-link {
   font-family: 'Merriweather', serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   color: #828282;
   text-decoration: none;
@@ -63,18 +63,19 @@
 
 .screen-intro img {
   display: block;
-  margin-top: 10px;
+  margin-top: 5px;
+  width: 90px;
 }
 
 .screen-intro h1 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .screen-intro .p1 {
   line-height: 1.75;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .screen-intro .p2 {
@@ -83,14 +84,14 @@
 }
 
 .screen-intro .enter {
-  margin-top: 30px;
+  margin-top: 23px;
 }
 
 .screen-intro .illustration-credit {
   font-size: 12px;
   color: #7B7B7B;
-  margin-top: 50px;
-  margin-bottom: -20px;
+  margin-top: 25px;
+  margin-bottom: -10px;
   text-align: center;
 }
 
@@ -113,11 +114,11 @@
 
 .screen-question img {
   display: block;
-  width: 110px;
+  width: 50px;
 }
 
 .screen-question .filters {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -125,7 +126,7 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 700;
-  margin-top: 40px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -133,12 +134,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .screen-question .options button {
   display: block;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .screen-question .filler {
@@ -146,7 +147,7 @@
 }
 
 .screen-question .back-link {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 /* =============== */
@@ -160,17 +161,17 @@
 
 .screen-results img {
   display: block;
-  width: 110px;
+  width: 50px;
 }
 
 .screen-results .filters {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
 }
 
 .screen-results .articles-list {
   align-self: stretch;
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -184,7 +185,7 @@
 
 .screen-results .article .article-illustration {
   display: block;
-  flex: 0 0 170px;
+  flex: 0 0 160px;
 }
 
 .screen-results .article .article-illustration img {
@@ -193,7 +194,7 @@
 
 .screen-results .article .article-other {
   flex: 1 0 0px;
-  margin: 2px 0 0 15px;
+  margin: 2px 0 0 10px;
   font-size: 14px;
 }
 
@@ -206,19 +207,9 @@
   color: #6C6C6C;
 }
 
-@media screen and (max-width: 450px) {
-  .screen-results .article {
-    flex-direction: column;
-  }
-
+@media screen and (max-width: 400px) {
   .screen-results .article .article-illustration {
-    flex: 0 0 auto;
-    width: 170px;
-  }
-
-  .screen-results .article .article-other {
-    flex: 0 0 auto;
-    margin: 5px 0 0 0;
+    flex-basis: 120px;
   }
 }
 

@@ -12,8 +12,8 @@ const LabyrintApp = () => {
   const [hasEntered, setHasEntered] = React.useState(false);
   const [conspiracies, setConspiracies] = React.useState(conspiraciesData);
   const [filters, setFilters] = React.useState([]);
+  const [steps, setSteps] = React.useState(allSteps);
 
-  const steps = ["goals", "actors", "targets", "consequences", "actions"];
   const [stepIndex, setStepIndex] = React.useState(0);
   const step = steps[stepIndex];
 
@@ -37,7 +37,7 @@ const LabyrintApp = () => {
           );
         }
       }
-    }, 300),
+    }, 50),
     []
   );
 
@@ -47,11 +47,16 @@ const LabyrintApp = () => {
         key: step,
         value: option,
       };
+
       const newFilters = [...filters, newFilter];
+      const newConspiracies = applyFilters(conspiraciesData, newFilters);
+      const newStepIndex = stepIndex + 1;
+      const newSteps = computeSteps(newFilters, newConspiracies, newStepIndex);
 
       setFilters(newFilters);
-      setConspiracies(applyFilters(conspiraciesData, newFilters));
-      setStepIndex(stepIndex + 1);
+      setConspiracies(newConspiracies);
+      setStepIndex(newStepIndex);
+      setSteps(newSteps);
     },
     [
       step,
@@ -59,8 +64,8 @@ const LabyrintApp = () => {
       setStepIndex,
       filters,
       setFilters,
-      conspiracies,
       setConspiracies,
+      setSteps,
     ]
   );
 
@@ -69,36 +74,45 @@ const LabyrintApp = () => {
       setHasEntered(false);
     } else {
       const newFilters = filters.slice(0, -1);
+      const newConspiracies = applyFilters(conspiraciesData, newFilters);
+      const newStepIndex = stepIndex - 1;
+      const newSteps = computeSteps(newFilters, newConspiracies, newStepIndex);
+
       setFilters(newFilters);
-      setConspiracies(applyFilters(conspiraciesData, newFilters));
-      setStepIndex(stepIndex - 1);
+      setConspiracies(newConspiracies);
+      setStepIndex(newStepIndex);
+      setSteps(newSteps);
     }
-  }, [filters, setHasEntered, setFilters, setConspiracies, setStepIndex]);
+  }, [
+    filters,
+    setHasEntered,
+    setFilters,
+    setConspiracies,
+    setStepIndex,
+    setSteps,
+  ]);
 
   React.useEffect(() => {
     onResize();
   }, [hasEntered, stepIndex, onResize]);
 
   React.useEffect(() => {
-    onResize();
+    // First load can take longer
+    setTimeout(() => {
+      onResize();
+    }, 200);
+
     window.addEventListener("resize", onResize);
     return () => {
       window.removeEventListener("resize", onResize);
     };
   }, [onResize]);
 
-  const options = sortBy(
-    uniq(
-      conspiracies.reduce((carry, conspiracy) => {
-        return carry.concat(conspiracy[step]);
-      }, [])
-    ),
-    (o) => o
-  );
+  const options = prepareOptions(conspiracies, step);
 
   const showIntro = !hasEntered;
   const showResults =
-    !showIntro && (conspiracies.length <= 3 || stepIndex >= steps.length - 1);
+    !showIntro && (conspiracies.length <= 2 || stepIndex > steps.length - 1);
   const showQuestion = !showIntro && !showResults;
 
   return (
@@ -111,20 +125,20 @@ const LabyrintApp = () => {
           <img src="labyrint.svg" alt="Labyrint konspirací" />
           <h1>Antivax labyrint</h1>
           <p className="p1">
-            Vítejte v labyrintu vakcinačních konspirací. Nacházíte se na začátku
-            virtuálního prostoru, v jehož chodbách číhají různé záškodné entity.
-            O některých jste již možná slyšeli, jiné se ze stínů vynořily teprve
-            nedávno. Všechny mají ale společné jedno: chtějí vás navést do slepé
-            uličky mýtů, polopravd a lží ohledně původu a efektů vakcín proti
-            nemoci covid-19.
+            Vítejte v&nbsp;labyrintu vakcinačních konspirací. Nacházíte se na
+            začátku virtuálního prostoru, v&nbsp;jehož chodbách číhají různé
+            záškodné entity. O&nbsp;některých jste již možná slyšeli, jiné se ze
+            stínů vynořily teprve nedávno. Všechny mají ale společné jedno:
+            chtějí vás navést do slepé uličky mýtů, polopravd a&nbsp;lží ohledně
+            původu a&nbsp;efektů vakcín proti nemoci covid-19.
           </p>
           <p className="p2">
-            Na této stránce si tak můžete vyzkoušet cestu do šera postfaktického
-            světa internetu za časů pandemie. V prvním kroku volíte cíl daného
-            konspiračního narativu, následně údajného původce této aktivity,
-            poté její oběť, a nakonec konkrétní následky na těchto obětech. Na
-            konci na vás vždy bude čekat odkaz na konkrétní konspirační článek a
-            také možnost vrátit se na začátek labyrintu. Hodně štěstí!
+            V&nbsp;této aplikaci si tak můžete vyzkoušet cestu do šera
+            postfaktického světa internetu za časů pandemie. V&nbsp;prvním kroku
+            volíte údajného původce konspiračního narativu, následně cíl daných
+            aktivit, poté oběť a&nbsp;následky na nich a&nbsp;nakonec konkrétní
+            prováděné akce. Na konci na vás vždy budou čekat odkazy na konkrétní
+            konspirační články. Hodně štěstí!
           </p>
           <button
             type="button"
@@ -134,13 +148,21 @@ const LabyrintApp = () => {
             <span className="text">Vstoupit do labyrintu</span> →
           </button>
           <div class="illustration-credit">
-            Autorem ilustrace labyrintu je{" "}
+            Autorem{" "}
             <a
               href="https://thenounproject.com/term/maze/2871969"
               target="_blank"
             >
-              Alexander&nbsp;Skowalsky
+              ilustrace labyrintu
+            </a>{" "}
+            je Alexander Skowalsky (
+            <a
+              href="https://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+            >
+              CC&nbsp;BY
             </a>
+            )
           </div>
         </div>
       )}
@@ -177,7 +199,7 @@ const LabyrintApp = () => {
           )}
           {step === "targets" && <h2>Kdo má být obětí?</h2>}
           {step === "consequences" && <h2>Jaké následky má oběť nést?</h2>}
-          {step === "actions" && <p>Jaké akce by měly být použity?</p>}
+          {step === "actions" && <h2>Jaké akce by měly být použity?</h2>}
 
           <div className="options">
             {options.map((option, index) => (
@@ -233,7 +255,10 @@ const LabyrintApp = () => {
 
           <div className="articles-list">
             {conspiracies.map((conspiracy) => (
-              <div key={conspiracy.sources_no} className="article">
+              <div
+                key={"conspiracy-" + conspiracy.sources_no}
+                className="article"
+              >
                 <a
                   href={conspiracy.link}
                   target="_blank"
@@ -273,6 +298,8 @@ const LabyrintApp = () => {
   );
 };
 
+const allSteps = ["actors", "goals", "targets", "consequences", "actions"];
+
 const applyFilters = (conspiracies, filters) => {
   const filtered = conspiracies.filter((conspiracy) => {
     return filters.every((filter) => {
@@ -281,6 +308,47 @@ const applyFilters = (conspiracies, filters) => {
   });
 
   return orderBy(filtered, ["title", "server"], ["asc", "asc"]);
+};
+
+const prepareOptions = (conspiracies, step) =>
+  sortBy(
+    uniq(
+      conspiracies.reduce((carry, conspiracy) => {
+        return carry.concat(conspiracy[step]);
+      }, [])
+    ),
+    (o) => o
+  );
+
+const computeSteps = (filters, conspiracies, stepIndex) => {
+  const newSteps = [];
+
+  for (const step of allSteps) {
+    if (filters.find((filter) => filter.key === step)) {
+      newSteps.push(step);
+      continue;
+    }
+
+    const options = prepareOptions(conspiracies, step);
+    if (options.length === 1) {
+      // If there is only one option to choose from, just remove that step
+      continue;
+    }
+
+    const allConspiraciesHaveAllOptions = conspiracies.every((conspiracy) => {
+      return options.every((option) => conspiracy[step].includes(option));
+    });
+    if (allConspiraciesHaveAllOptions) {
+      // If all conspiracies have all options, meaning choosing does not change
+      // anything, then just remove that step too
+      continue;
+    }
+
+    newSteps.push(step);
+    continue;
+  }
+
+  return newSteps;
 };
 
 const availableArticleIllustrations = [
@@ -298,7 +366,6 @@ const availableArticleIllustrations = [
 ];
 
 const getArticleIllustrationUrl = (conspiracy) => {
-  console.log("-----------", { conspiracy });
   if (availableArticleIllustrations.includes(conspiracy.sources_no)) {
     return `article-illustrations/${conspiracy.sources_no}.jpg`;
   }
