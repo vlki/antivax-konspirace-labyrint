@@ -275,7 +275,7 @@ const LabyrintApp = () => {
                     target="_blank"
                     className="primary-link article-link"
                   >
-                    {conspiracy.title}
+                    <span className="text">{conspiracy.title}</span>
                   </a>{" "}
                   <div className="article-server">{conspiracy.server}</div>
                 </div>
