@@ -17,6 +17,8 @@ const LabyrintApp = () => {
   const [stepIndex, setStepIndex] = React.useState(0);
   const step = steps[stepIndex];
 
+  const [showCoding, setShowCoding] = React.useState(false);
+
   const onResize = React.useCallback(
     debounce(() => {
       const appElement = document.getElementById(
@@ -83,6 +85,8 @@ const LabyrintApp = () => {
       setStepIndex(newStepIndex);
       setSteps(newSteps);
     }
+
+    setShowCoding(false);
   }, [
     filters,
     setHasEntered,
@@ -90,6 +94,7 @@ const LabyrintApp = () => {
     setConspiracies,
     setStepIndex,
     setSteps,
+    setShowCoding,
   ]);
 
   React.useEffect(() => {
@@ -107,6 +112,16 @@ const LabyrintApp = () => {
       window.removeEventListener("resize", onResize);
     };
   }, [onResize]);
+
+  const showArticleCoding = React.useCallback(
+    (conspiracy) => {
+      setShowCoding(
+        showCoding === conspiracy.sources_no ? false : conspiracy.sources_no
+      );
+      onResize();
+    },
+    [setShowCoding, showCoding, onResize]
+  );
 
   const options = prepareOptions(conspiracies, step);
 
@@ -209,7 +224,7 @@ const LabyrintApp = () => {
                 className="primary-link"
                 onClick={() => onOptionSelected(option)}
               >
-                <span className="text">{option}</span> →
+                <span className="text">{option}</span>&nbsp;→
               </button>
             ))}
           </div>
@@ -257,28 +272,62 @@ const LabyrintApp = () => {
             {conspiracies.map((conspiracy) => (
               <div
                 key={"conspiracy-" + conspiracy.sources_no}
-                className="article"
+                className={
+                  `article` +
+                  (showCoding === conspiracy.sources_no
+                    ? " article-show-coding"
+                    : "")
+                }
               >
-                <a
-                  href={conspiracy.link}
-                  target="_blank"
-                  className="article-illustration"
-                >
-                  <img
-                    src={getArticleIllustrationUrl(conspiracy)}
-                    alt={conspiracy.title + " (" + conspiracy.server + ")"}
-                  />
-                </a>
-                <div className="article-other">
+                <div className="article-main">
                   <a
                     href={conspiracy.link}
                     target="_blank"
-                    className="primary-link article-link"
+                    className="article-illustration"
                   >
-                    <span className="text">{conspiracy.title}</span>
-                  </a>{" "}
-                  <div className="article-server">{conspiracy.server}</div>
+                    <img
+                      src={getArticleIllustrationUrl(conspiracy)}
+                      alt={conspiracy.title + " (" + conspiracy.server + ")"}
+                    />
+                  </a>
+                  <div className="article-other">
+                    <a
+                      href={conspiracy.link}
+                      target="_blank"
+                      className="primary-link article-link"
+                    >
+                      <span className="text">{conspiracy.title}</span>
+                    </a>{" "}
+                    <div className="article-server">{conspiracy.server}</div>
+                    <button
+                      type="button"
+                      className="secondary-link"
+                      onClick={() => showArticleCoding(conspiracy)}
+                    >
+                      <span className="text">
+                        {showCoding === conspiracy.sources_no
+                          ? "Skrýt kódování"
+                          : "Zobrazit kódování"}
+                      </span>
+                    </button>
+                  </div>
                 </div>
+
+                {showCoding === conspiracy.sources_no && (
+                  <div className="article-coding">
+                    {buildArticleNarrativeSentence(conspiracy)}
+
+                    <div className="source">
+                      Kódování dle metodiky z: INTRONE, Joshua, Ania KORSUNSKA,
+                      Leni KRSOVA a Zefeng ZHANG. Mapping the Narrative
+                      Ecosystem of Conspiracy Theories in Online
+                      Anti-vaccination Discussions. In: International Conference
+                      on Social Media and Society [online]. New York, NY, USA:
+                      ACM, 2020, 2020-07-22, s. 184-192 [cit. 2021-5-19]. ISBN
+                      9781450376884. Dostupné z: doi:10.1145/3400806.3400828
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -371,6 +420,87 @@ const getArticleIllustrationUrl = (conspiracy) => {
   }
 
   return "article-illustration-placeholder.svg";
+};
+
+const buildArticleNarrativeSentence = (conspiracy) => {
+  const events = buildArticleNarrativeSentencePart(
+    conspiracy.events,
+    "událost",
+    "události"
+  );
+  const actors = buildArticleNarrativeSentencePart(
+    conspiracy.actors,
+    "aktéra",
+    "aktérů"
+  );
+  const goals = buildArticleNarrativeSentencePart(
+    conspiracy.goals,
+    "s cílem",
+    "s cíli"
+  );
+  const actions = buildArticleNarrativeSentencePart(
+    conspiracy.actions,
+    "akce",
+    "akcí"
+  );
+  const consequences = buildArticleNarrativeSentencePart(
+    conspiracy.consequences,
+    "s následkem",
+    "s následky"
+  );
+  const targets = buildArticleNarrativeSentencePart(
+    conspiracy.targets,
+    "oběť",
+    "oběti"
+  );
+
+  return (
+    <>
+      Konspirační narativ v článku vysvětluje {events} jako koordinovanou akci{" "}
+      {actors} {goals} pomocí {actions} {consequences} pro {targets}.
+    </>
+  );
+};
+
+const buildArticleNarrativeSentencePart = (
+  values,
+  singleLabel = null,
+  multipleLabel = null
+) => {
+  let part = (
+    <>
+      {singleLabel !== null && multipleLabel !== null && <>{singleLabel} </>}
+      <em>{"(chybí)"}</em>
+    </>
+  );
+
+  if (values.length > 0) {
+    part = [];
+
+    if (singleLabel !== null && multipleLabel !== null) {
+      part.push(
+        <React.Fragment key="label">
+          {values.length === 1 ? `${singleLabel} ` : `${multipleLabel} `}
+        </React.Fragment>
+      );
+    }
+
+    sortBy(values, (v) => v).forEach((value, index) => {
+      if (index > 0 && index === values.length - 1) {
+        part.push(
+          <React.Fragment key={`delimiter-${index}`}> a </React.Fragment>
+        );
+      } else if (index > 0) {
+        part.push(
+          <React.Fragment key={`delimiter-${index}`}>, </React.Fragment>
+        );
+      }
+
+      part.push(<em key={value}>{value}</em>);
+    });
+  }
+
+  return part;
 };
 
 const container = document.getElementById("antivax-konspirace-labyrint");

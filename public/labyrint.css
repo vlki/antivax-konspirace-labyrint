@@ -37,7 +37,7 @@
   font-family: 'Merriweather', serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #828282;
+  color: #6C6C6C;
   text-decoration: none;
   border: 0;
   margin: 0;
@@ -171,44 +171,69 @@
 
 .screen-results .articles-list {
   align-self: stretch;
-  margin-top: 5px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
 .screen-results .article {
-  display: flex;
-  flex-direction: row;
-  margin-top: 15px;
+  margin: 0 -20px 0 -20px;
+  padding: 7.5px 20px;
 }
 
-.screen-results .article .article-illustration {
+.screen-results .article.article-show-coding {
+  background-color: #fff6ef;
+}
+
+.screen-results .article .article-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.screen-results .article .article-main .article-illustration {
   display: block;
   flex: 0 0 160px;
 }
 
-.screen-results .article .article-illustration img {
+.screen-results .article .article-main .article-illustration img {
   width: 100%;
 }
 
-.screen-results .article .article-other {
+.screen-results .article .article-main .article-other {
   flex: 1 0 0px;
   margin: 2px 0 0 10px;
   font-size: 14px;
 }
 
-.screen-results .article .article-other .article-link {
+.screen-results .article .article-main .article-other .article-link {
   display: block;
   font-size: 14px;
 }
 
-.screen-results .article .article-other .article-server {
+.screen-results .article .article-main .article-other .article-server {
   color: #6C6C6C;
 }
 
+.screen-results .article .article-coding {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.screen-results .article .article-coding em {
+  font-weight: 700;
+}
+
+.screen-results .article .article-coding .source {
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 400px) {
-  .screen-results .article .article-illustration {
+  .screen-results .article .article-main .article-illustration {
     flex-basis: 120px;
   }
 }
