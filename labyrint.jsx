@@ -306,8 +306,8 @@ const LabyrintApp = () => {
                     >
                       <span className="text">
                         {showCoding === conspiracy.sources_no
-                          ? "Skrýt kódování"
-                          : "Zobrazit kódování"}
+                          ? "Skrýt narativ"
+                          : "Zobrazit narativ"}
                       </span>
                     </button>
                   </div>
