@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div style="max-width: 450px;margin: 0 auto;">
+    <div style="max-width: 700px;margin: 0 auto;">
       <iframe src="labyrint.html" class="antivax-konspirace-labyrint-iframe" style="width: 100%; max-width: 450px; background-color: rgb(255, 255, 255);" frameborder="0" height="625"></iframe>
       <script src="labyrint.js" type="text/javascript"></script>
 
@@ -17,6 +17,50 @@
   &lt;iframe src="https://antivax-konspirace-labyrint-liglt.ondigitalocean.app/labyrint.html" class="antivax-konspirace-labyrint-iframe" style="width: 100%; max-width: 450px; background-color: rgb(255, 255, 255);" frameborder="0" height="625"&gt;&lt;/iframe&gt;<br>
   &lt;script src="https://antivax-konspirace-labyrint-liglt.ondigitalocean.app/labyrint.js" type="text/javascript"&gt;&lt;/script&gt;
       </code></pre>
+
+      <br>
+      <hr>
+      <br>
+
+      <h2>Demo zoomovatelného svg</h2>
+      
+      <div style="width: 100%; height: 400px;" id="mapoftheworld-svg-viewer"></div>
+      <script src="openseadragon-bin-2.4.2/openseadragon.min.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        var viewer = OpenSeadragon({
+          id: 'mapoftheworld-svg-viewer',
+          prefixUrl: 'openseadragon-bin-2.4.2/images/',
+          tileSources: {
+            type: 'image',
+            url:  'mapoftheworld.svg'
+          }
+        });
+      </script>
+
+      <p>Embed kód:</p>
+      <pre style="background-color: #eee; white-space: initial; padding: 10px"><code>
+  &lt;div style="width: 100%; height: 400px;" id="mapoftheworld-svg-viewer"&gt;&lt;/div&gt;<br>
+  &lt;script src="https://antivax-konspirace-labyrint-liglt.ondigitalocean.app/openseadragon-bin-2.4.2/openseadragon.min.js" type="text/javascript"&gt;&lt;/script&gt;<br>
+  &lt;script type="text/javascript"&gt;<br>
+&nbsp;&nbsp;var viewer = OpenSeadragon({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id: 'mapoftheworld-svg-viewer',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prefixUrl: 'https://antivax-konspirace-labyrint-liglt.ondigitalocean.app/openseadragon-bin-2.4.2/images/',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tileSources: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: 'image',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:  'https://antivax-konspirace-labyrint-liglt.ondigitalocean.app/mapoftheworld.svg'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;});<br>
+  &lt;/script&gt;
+      </code></pre>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
   </body>
 </html>
