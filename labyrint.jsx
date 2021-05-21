@@ -318,13 +318,16 @@ const LabyrintApp = () => {
                     {buildArticleNarrativeSentence(conspiracy)}
 
                     <div className="source">
-                      Kódování dle metodiky z: INTRONE, Joshua, Ania KORSUNSKA,
-                      Leni KRSOVA a Zefeng ZHANG. Mapping the Narrative
-                      Ecosystem of Conspiracy Theories in Online
-                      Anti-vaccination Discussions. In: International Conference
-                      on Social Media and Society [online]. New York, NY, USA:
-                      ACM, 2020, 2020-07-22, s. 184-192 [cit. 2021-5-19]. ISBN
-                      9781450376884. Dostupné z: doi:10.1145/3400806.3400828
+                      Kódování dle metodiky z{" "}
+                      <a
+                        href="https://doi.org/10.1145/3400806.3400828"
+                        target="_blank"
+                      >
+                        Mapping the Narrative Ecosystem of Conspiracy Theories
+                        in Online Anti-vaccination Discussions (Introne,
+                        Korsunska, Krsova a Zhang, 2020)
+                      </a>
+                      .
                     </div>
                   </div>
                 )}
