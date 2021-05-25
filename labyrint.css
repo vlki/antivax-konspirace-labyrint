@@ -184,7 +184,7 @@
 }
 
 .screen-results .article.article-show-coding {
-  background-color: #fff3ea;
+  background-color: #fdf5f0;
 }
 
 .screen-results .article .article-main {
@@ -228,8 +228,8 @@
 }
 
 .screen-results .article .article-coding .source {
-  font-size: 10px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.5;
   margin-top: 10px;
 }
 
