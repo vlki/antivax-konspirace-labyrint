@@ -72,6 +72,7 @@ const LabyrintApp = () => {
       setFilters,
       setConspiracies,
       setSteps,
+      setShowCoding,
     ]
   );
 
