@@ -1,0 +1,258 @@
+.antivax-konspirace-labyrint-app {
+  box-sizing: border-box;
+  max-width: 450px;
+  min-height: 625px;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.primary-link {
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #c75d07;
+  text-decoration: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.primary-link .text {
+  text-decoration: underline;
+}
+
+.primary-link:hover, .primary-link:focus {
+  color: #000000;
+}
+
+.secondary-link {
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6C6C6C;
+  text-decoration: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.secondary-link .text {
+  text-decoration: underline;
+}
+
+.secondary-link:hover, .primary-link:focus {
+  color: #000000;
+}
+
+/* =============== */
+
+.screen-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen-intro img {
+  display: block;
+  margin-top: 5px;
+  width: 90px;
+}
+
+.screen-intro h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.screen-intro .p1 {
+  line-height: 1.75;
+  margin-top: 20px;
+}
+
+.screen-intro .p2 {
+  line-height: 1.75;
+  margin-top: 20px;
+}
+
+.screen-intro .enter {
+  margin-top: 23px;
+}
+
+.screen-intro .illustration-credit {
+  font-size: 12px;
+  color: #6C6C6C;
+  margin-top: 25px;
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+.screen-intro .illustration-credit a {
+  color: #6C6C6C;
+  text-decoration: underline;
+}
+
+.screen-intro .illustration-credit a:hover, .screen-intro .illustration-credit a:focus {
+  color: #000000;
+}
+
+/* =============== */
+
+.screen-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+.screen-question img {
+  display: block;
+  width: 50px;
+}
+
+.screen-question .filters {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.screen-question h2 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.screen-question .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.screen-question .options button {
+  display: block;
+  margin-top: 7px;
+}
+
+.screen-question .filler {
+  flex: 1 0 0px;
+}
+
+.screen-question .back-link {
+  margin-top: 25px;
+}
+
+/* =============== */
+
+.screen-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+.screen-results img {
+  display: block;
+  width: 50px;
+}
+
+.screen-results .filters {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.screen-results .articles-list {
+  align-self: stretch;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.screen-results .article {
+  margin: 0 -20px 0 -20px;
+  padding: 7.5px 20px;
+}
+
+.screen-results .article.article-show-coding {
+  background-color: #fff3ea;
+}
+
+.screen-results .article .article-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.screen-results .article .article-main .article-illustration {
+  display: block;
+  flex: 0 0 160px;
+}
+
+.screen-results .article .article-main .article-illustration img {
+  width: 100%;
+}
+
+.screen-results .article .article-main .article-other {
+  flex: 1 0 0px;
+  margin: 2px 0 0 10px;
+  font-size: 14px;
+}
+
+.screen-results .article .article-main .article-other .article-link {
+  display: block;
+  font-size: 14px;
+}
+
+.screen-results .article .article-main .article-other .article-server {
+  color: #6C6C6C;
+}
+
+.screen-results .article .article-coding {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.screen-results .article .article-coding em {
+  font-weight: 700;
+}
+
+.screen-results .article .article-coding .source {
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+.screen-results .article .article-coding .source a {
+  color: #6C6C6C;
+  text-decoration: underline;
+}
+
+.screen-results .article .article-coding .source a:hover,
+.screen-results .article .article-coding .source a:focus {
+  color: #000000;
+}
+
+@media screen and (max-width: 400px) {
+  .screen-results .article .article-main .article-illustration {
+    flex-basis: 120px;
+  }
+}
+
+.screen-results .filler {
+  flex: 1 0 0px;
+}
+
+.screen-results .back-link {
+  margin-top: 30px;
+}
