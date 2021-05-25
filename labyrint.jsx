@@ -59,6 +59,10 @@ const LabyrintApp = () => {
       setConspiracies(newConspiracies);
       setStepIndex(newStepIndex);
       setSteps(newSteps);
+
+      if (newConspiracies.length === 1) {
+        setShowCoding(newConspiracies[0].sources_no);
+      }
     },
     [
       step,
@@ -102,13 +106,14 @@ const LabyrintApp = () => {
   }, [hasEntered, stepIndex, onResize]);
 
   React.useEffect(() => {
-    // First load can take longer
-    setTimeout(() => {
+    // Loads can take longer, just notify about the size regularly
+    const intervalId = window.setInterval(() => {
       onResize();
-    }, 200);
+    }, 500);
 
     window.addEventListener("resize", onResize);
     return () => {
+      clearInterval(intervalId);
       window.removeEventListener("resize", onResize);
     };
   }, [onResize]);
